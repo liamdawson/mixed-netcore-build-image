@@ -83,3 +83,4 @@ RUN mkdir warmup \
     && rm -rf warmup \
     && rm -rf /tmp/NuGetScratch
 
+npm i -g yarn
