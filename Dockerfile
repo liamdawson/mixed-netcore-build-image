@@ -34,8 +34,8 @@ RUN curl -SL $STABLE_RUNTIME_DOWNLOAD_URL --output dotnet.tar.gz \
   && mkdir $STABLE_RUNTIME_VERSION \
   && tar -xzf dotnet.tar.gz -C $STABLE_RUNTIME_VERSION \
   && rm dotnet.tar.gz \
-  && mv $STABLE_RUNTIME_VERSION/host /usr/share/dotnet/ \
-  && mv $STABLE_RUNTIME_VERSION/shared /usr/share/dotnet/ \
+  && cp -r $STABLE_RUNTIME_VERSION/host /usr/share/dotnet/ \
+  && cp -r $STABLE_RUNTIME_VERSION/shared /usr/share/dotnet/ \
   && rm -rf $STABLE_RUNTIME_VERSION
 
 # Download node from the node dockerfile:
